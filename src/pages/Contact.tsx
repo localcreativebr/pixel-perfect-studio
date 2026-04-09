@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <Layout>
       <section className="px-3 py-8">
-        <h1 className="text-4xl font-normal mb-16">Contact</h1>
+        <h1 className="text-4xl mb-16 font-semibold">Contact</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Left side - info */}
@@ -48,7 +48,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="text-lg hover:opacity-70 transition-opacity"
             >
-              WhatsApp: +55 11 94026-3546
+              
             </a>
             <a
               href="https://www.instagram.com/localcreativebr/"
@@ -56,7 +56,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="text-lg hover:opacity-70 transition-opacity"
             >
-              Instagram: @localcreativebr
+              
             </a>
           </div>
 
