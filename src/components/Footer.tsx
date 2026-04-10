@@ -6,7 +6,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
       {/* Top section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div>
-          <h2 className="text-4xl md:text-5xl font-bold">©2026</h2>
+          <h2 className="text-4xl font-bold md:text-2xl">©2026</h2>
         </div>
         <div>
           <h2 className="text-3xl md:text-4xl font-extrabold uppercase leading-tight">
