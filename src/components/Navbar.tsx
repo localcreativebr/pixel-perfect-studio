@@ -7,7 +7,7 @@ const Navbar = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <nav ref={ref} className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-4 py-5">
-      <div className="flex items-center justify-between rounded-2xl px-6 py-3 max-w-2xl w-full">
+      <div className="flex items-center justify-between bg-background rounded-2xl px-6 py-3 shadow-sm max-w-2xl w-full">
         <Link to="/">
           <img src={logo} alt="LocalCreative" className="h-4 sm:h-5 w-auto" />
         </Link>
