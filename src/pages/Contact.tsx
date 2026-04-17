@@ -63,12 +63,12 @@ const Contact = () => {
           {/* Right side - form */}
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div>
-              <label className="text-sm font-bold block mb-1">Name</label>
+              <label className="text-sm font-bold block mb-1">Nome</label>
               <div className="grid grid-cols-2 gap-3">
                 <input
                   type="text"
                   name="firstName"
-                  placeholder="First Name"
+                  placeholder="Primeiro Nome"
                   value={form.firstName}
                   onChange={handleChange}
                   required
@@ -77,7 +77,7 @@ const Contact = () => {
                 <input
                   type="text"
                   name="lastName"
-                  placeholder="Last Name"
+                  placeholder="Sobrenome"
                   value={form.lastName}
                   onChange={handleChange}
                   required
@@ -98,7 +98,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder="E-mail"
               value={form.email}
               onChange={handleChange}
               required
@@ -107,7 +107,7 @@ const Contact = () => {
 
             <textarea
               name="description"
-              placeholder="Project description"
+              placeholder="Descrição do projeto"
               value={form.description}
               onChange={handleChange}
               rows={5}
@@ -120,7 +120,7 @@ const Contact = () => {
                 disabled={sending}
                 className="bg-foreground text-background px-6 py-2.5 rounded-xl text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
               >
-                {sent ? "Enviado!" : sending ? "Enviando..." : "Let's work!"}
+                {sent ? "Enviado!" : sending ? "Enviando..." : "Vamos trabalhar!"}
               </button>
             </div>
           </form>
