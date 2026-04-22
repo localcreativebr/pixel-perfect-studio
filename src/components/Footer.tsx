@@ -42,10 +42,10 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             Instagram
           </a>
           <a
-            href="mailto:hello@localcreative.com"
+            href="mailto:localcreative@gmail.com"
             className="text-lg font-medium hover:opacity-70 transition-opacity"
           >
-            hello@localcreative.com
+            localcreative@gmail.com
           </a>
         </div>
         <div className="flex flex-col gap-4">
