@@ -26,7 +26,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col gap-6">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/local-creativebr/posts/?feedView=all"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg font-medium hover:opacity-70 transition-opacity"

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { siteContent } from "@/data/content";
+import motionCapa from "@/assets/motion-capa.gif";
 
 const Home = () => {
   const { projects } = siteContent;
@@ -8,12 +9,12 @@ const Home = () => {
   return (
     <Layout>
       {/* Hero - Sticky */}
-      <section className="sticky-hero h-[calc(100vh-5rem)] bg-secondary rounded-none flex items-center justify-center">
-        <div className="w-full h-full flex items-center justify-center">
-          <p className="text-muted-foreground text-sm uppercase tracking-widest">
-            Motion / Vídeo placeholder
-          </p>
-        </div>
+      <section className="sticky-hero h-[calc(100vh-5rem)] bg-secondary rounded-none overflow-hidden">
+        <img
+          src={motionCapa}
+          alt="Local Creative — motion principal"
+          className="w-full h-full object-cover"
+        />
       </section>
 
       {/* Projects Grid - scrolls over hero */}
