@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { siteContent } from "@/data/content";
-import motionCapa from "@/assets/home-capa.gif";
+import motionCapa from "@/assets/home-capa.mp4";
 
 const isVideo = (src: string) => /\.(mp4|webm|mov)(\?|$)/i.test(src);
 
@@ -12,10 +12,13 @@ const Home = () => {
     <Layout>
       {/* Hero - Sticky */}
       <section className="sticky-hero h-[calc(100vh-5rem)] bg-secondary rounded-none overflow-hidden">
-        <img
+        <video
           src={motionCapa}
-          alt="Local Creative — motion principal"
           className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
       </section>
 
