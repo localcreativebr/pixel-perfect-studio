@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { siteContent } from "@/data/content";
-import motionCapa from "@/assets/motion-capa.gif";
+import motionCapa from "@/assets/home-capa.gif";
+
+const isVideo = (src: string) => /\.(mp4|webm|mov)(\?|$)/i.test(src);
 
 const Home = () => {
   const { projects } = siteContent;
@@ -28,12 +30,23 @@ const Home = () => {
             >
               <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden flex items-center justify-center transition-transform duration-300 group-hover:scale-[0.98]">
                 {project.thumbnail ? (
-                  <img
-                    src={project.thumbnail}
-                    alt={project.name}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
+                  isVideo(project.thumbnail) ? (
+                    <video
+                      src={project.thumbnail}
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
+                  ) : (
+                    <img
+                      src={project.thumbnail}
+                      alt={project.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  )
                 ) : (
                   <div className="w-full h-full bg-secondary" />
                 )}
