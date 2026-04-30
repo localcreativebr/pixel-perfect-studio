@@ -2,6 +2,25 @@ import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { siteContent } from "@/data/content";
 
+const isVideo = (src: string) => /\.(mp4|webm|mov)(\?|$)/i.test(src);
+
+const Media = ({ src, className }: { src: string; className?: string }) => {
+  if (!src) return <div className={className} />;
+  if (isVideo(src)) {
+    return (
+      <video
+        src={src}
+        className={className}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+    );
+  }
+  return <img src={src} alt="" className={className} />;
+};
+
 const ProjectDetail = () => {
   const { id } = useParams();
   const project = siteContent.projects.find((p) => p.id === id);
@@ -21,18 +40,10 @@ const ProjectDetail = () => {
 
   return (
     <Layout>
-      {/* Hero image */}
+      {/* Hero */}
       <section className="px-0">
-        <div className="bg-secondary w-full aspect-video flex items-center justify-center">
-          {project.thumbnail ? (
-            <img
-              src={project.thumbnail}
-              alt={project.name}
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <div className="w-full h-full bg-secondary" />
-          )}
+        <div className="bg-secondary w-full aspect-video overflow-hidden">
+          <Media src={project.thumbnail} className="w-full h-full object-cover" />
         </div>
       </section>
 
@@ -42,61 +53,48 @@ const ProjectDetail = () => {
           <h1 className="text-3xl md:text-4xl font-bold italic">
             {project.name}
           </h1>
-          <p className="text-lg leading-relaxed">{project.description}</p>
+          <p className="text-lg leading-relaxed whitespace-pre-line">
+            {project.description}
+          </p>
         </div>
       </section>
 
-      {/* Gallery */}
+      {/* Gallery: pair every two consecutive images side-by-side, but if total odd the last one is full width */}
       <section className="px-3 pb-8">
-        {/* Full width images alternating with grid */}
-        {project.images.map((img, i) => {
-          if (i % 3 === 0 && i + 1 < project.images.length) {
-            // Two-column row
-            return (
-              <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-                <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
-                  {img ? (
-                    <img src={img} alt="" className="w-full h-full object-cover" />
-                  ) : (
-                    <div className="w-full h-full bg-secondary" />
-                  )}
-                </div>
-                {project.images[i + 1] !== undefined && (
+        {(() => {
+          const items = project.images;
+          const rows: JSX.Element[] = [];
+          let i = 0;
+          while (i < items.length) {
+            if (i + 1 < items.length) {
+              rows.push(
+                <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                   <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
-                    {project.images[i + 1] ? (
-                      <img
-                        src={project.images[i + 1]}
-                        alt=""
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-secondary" />
-                    )}
+                    <Media src={items[i]} className="w-full h-full object-cover" />
                   </div>
-                )}
-              </div>
-            );
+                  <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
+                    <Media src={items[i + 1]} className="w-full h-full object-cover" />
+                  </div>
+                </div>
+              );
+              i += 2;
+            } else {
+              rows.push(
+                <div
+                  key={i}
+                  className="bg-secondary w-full aspect-video mb-3 overflow-hidden rounded-xl"
+                >
+                  <Media src={items[i]} className="w-full h-full object-cover" />
+                </div>
+              );
+              i += 1;
+            }
           }
-          if (i % 3 === 2) {
-            // Full width
-            return (
-              <div
-                key={i}
-                className="bg-secondary w-full aspect-video mb-3 overflow-hidden"
-              >
-                {img ? (
-                  <img src={img} alt="" className="w-full h-full object-cover" />
-                ) : (
-                  <div className="w-full h-full bg-secondary" />
-                )}
-              </div>
-            );
-          }
-          return null;
-        })}
+          return rows;
+        })()}
       </section>
 
-      {/* Credits / Ficha Técnica */}
+      {/* Credits */}
       <section className="px-3 pb-16">
         <h3 className="text-sm font-bold mb-6 uppercase">Ficha Técnica</h3>
         <div className="flex flex-col gap-4">
