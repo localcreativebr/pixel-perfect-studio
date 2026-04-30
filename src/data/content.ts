@@ -1,6 +1,20 @@
 import fabricioPhoto from "@/assets/team/fabricio-costa.png";
 import brenoPhoto from "@/assets/team/breno-franca.png";
-import vamuCapa from "@/assets/motion-capa.gif";
+import vamuCapa from "@/assets/projects/vamu/capa.mp4";
+import vamu2 from "@/assets/projects/vamu/slide-2.webp";
+import vamu3 from "@/assets/projects/vamu/slide-3.mp4";
+import vamu4 from "@/assets/projects/vamu/slide-4.mp4";
+import vamu5 from "@/assets/projects/vamu/slide-5.webp";
+import vamu6 from "@/assets/projects/vamu/slide-6.webp";
+import vamu7 from "@/assets/projects/vamu/slide-7.mp4";
+import vamu8 from "@/assets/projects/vamu/slide-8.webp";
+import vamu9 from "@/assets/projects/vamu/slide-9.webp";
+import vamu10 from "@/assets/projects/vamu/slide-10.webp";
+import vamu11 from "@/assets/projects/vamu/slide-11.webp";
+import vamu12 from "@/assets/projects/vamu/slide-12.mp4";
+import vamu13 from "@/assets/projects/vamu/slide-13.webp";
+import vamu14 from "@/assets/projects/vamu/slide-14.mp4";
+import vamu15 from "@/assets/projects/vamu/slide-15.webp";
 import gonbankCapa from "@/assets/projects/gonbank/capa.gif";
 import gonbank2 from "@/assets/projects/gonbank/slide-2.png";
 import gonbank4 from "@/assets/projects/gonbank/slide-4.webp";
@@ -96,7 +110,7 @@ A tipografia foi pensada para remeter ao movimento do GPS pelas ruas, como se es
 
 O azul foi escolhido em conjunto com o cliente por ser uma cor forte e ao mesmo tempo leve. Ele representa um dia sem nuvens, tranquilidade e confiança. O azul também carrega a ideia de esperança — a mesma esperança que existe quando aguardamos a chegada de algo que acabamos de comprar. Na Vamo, o azul simboliza a certeza de que a entrega vai chegar.`,
       thumbnail: vamuCapa,
-      images: [],
+      images: [vamu2, vamu3, vamu4, vamu5, vamu6, vamu7, vamu8, vamu9, vamu10, vamu11, vamu12, vamu13, vamu14, vamu15],
       credits: [
         { role: "Creative Direction", name: "Fabricio Costa" },
         { role: "Design", name: "Breno França" },
