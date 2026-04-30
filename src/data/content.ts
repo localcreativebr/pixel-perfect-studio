@@ -1,7 +1,14 @@
 import fabricioPhoto from "@/assets/team/fabricio-costa.png";
 import brenoPhoto from "@/assets/team/breno-franca.png";
 import vamuCapa from "@/assets/motion-capa.gif";
-import gonbankCapa from "@/assets/motion-capa.gif";
+import gonbankCapa from "@/assets/projects/gonbank/capa.gif";
+import gonbank2 from "@/assets/projects/gonbank/slide-2.png";
+import gonbank4 from "@/assets/projects/gonbank/slide-4.webp";
+import gonbank5 from "@/assets/projects/gonbank/slide-5.gif";
+import gonbank6 from "@/assets/projects/gonbank/slide-6.webp";
+import gonbank7 from "@/assets/projects/gonbank/slide-7.webp";
+import gonbank8 from "@/assets/projects/gonbank/slide-8.webp";
+import gonbank9 from "@/assets/projects/gonbank/slide-9.gif";
 
 export interface Project {
   id: string;
@@ -113,7 +120,7 @@ Porque o banco tradicional não foi feito pra todo mundo. Porque nem todo mundo 
 
 E o GonBank é isso: um banco com alma digital, coração de rua e visão de futuro.`,
       thumbnail: gonbankCapa,
-      images: [],
+      images: [gonbank2, gonbank4, gonbank5, gonbank6, gonbank7, gonbank8, gonbank9],
       credits: [
         { role: "Creative Direction", name: "Fabricio Costa" },
         { role: "Design", name: "Rafael Purgatto / Fabrício Costa" },
