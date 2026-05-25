@@ -1,5 +1,6 @@
 import fabricioPhoto from "@/assets/team/fabricio-costa.png";
 import brenoPhoto from "@/assets/team/breno-franca.png";
+import nicollePhoto from "@/assets/team/nicolle-truglio.png";
 import vamuCapa from "@/assets/projects/vamu/capa.gif";
 import vamu2 from "@/assets/projects/vamu/slide-2.webp";
 import vamu3 from "@/assets/projects/vamu/slide-3.mp4";
@@ -92,6 +93,19 @@ export const siteContent = {
       en: {
         role: "Co-Founder — 24 years old",
         bio: "Brand Identity | Graphic Designer",
+      },
+    },
+    {
+      name: "Nicolle Truglio",
+      photo: nicollePhoto,
+      age: 24,
+      pt: {
+        role: "Designer — 24 anos",
+        bio: "Relacionamentos & Operações",
+      },
+      en: {
+        role: "Designer — 24 years old",
+        bio: "Relationships & Operations",
       },
     },
   ] as TeamMember[],

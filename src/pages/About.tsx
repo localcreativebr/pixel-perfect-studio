@@ -2,6 +2,7 @@ import { useState } from "react";
 import Layout from "@/components/Layout";
 import { siteContent, type Language } from "@/data/content";
 import { cn } from "@/lib/utils";
+import aboutCapa from "@/assets/about-capa.png";
 
 const About = () => {
   const [lang, setLang] = useState<Language>("pt");
@@ -11,8 +12,12 @@ const About = () => {
   return (
     <Layout>
       {/* Hero image area */}
-      <section className="bg-secondary w-full aspect-video flex items-center justify-center">
-        <div className="w-full h-full bg-secondary" />
+      <section className="bg-secondary w-full aspect-video overflow-hidden">
+        <img
+          src={aboutCapa}
+          alt="Local Creative studio"
+          className="w-full h-full object-cover"
+        />
       </section>
 
       {/* About text */}
