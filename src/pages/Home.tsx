@@ -10,8 +10,8 @@ const Home = () => {
 
   return (
     <Layout>
-      {/* Hero - Sticky */}
-      <section className="sticky-hero h-[calc(100vh-5rem)] bg-secondary rounded-none overflow-hidden">
+      {/* Fixed background motion - fills viewport, stays behind content */}
+      <div className="fixed inset-0 w-screen h-screen -z-10 bg-secondary overflow-hidden pointer-events-none">
         <video
           src={motionCapa}
           className="w-full h-full object-cover"
@@ -20,10 +20,13 @@ const Home = () => {
           muted
           playsInline
         />
-      </section>
+      </div>
 
-      {/* Projects Grid - scrolls over hero */}
-      <section className="content-over-hero bg-transparent px-3 py-4">
+      {/* Spacer so projects start below the hero viewport */}
+      <div className="h-[calc(100vh-5rem)]" aria-hidden="true" />
+
+      {/* Projects Grid - scrolls over the fixed motion */}
+      <section className="relative z-10 bg-transparent px-3 py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {projects.map((project) => (
             <Link
