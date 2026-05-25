@@ -23,7 +23,7 @@ const Home = () => {
       </section>
 
       {/* Projects Grid - scrolls over hero */}
-      <section className="content-over-hero bg-background px-3 py-4">
+      <section className="content-over-hero bg-transparent px-3 py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {projects.map((project) => (
             <Link

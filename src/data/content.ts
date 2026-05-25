@@ -1,5 +1,6 @@
 import fabricioPhoto from "@/assets/team/fabricio-costa.png";
 import brenoPhoto from "@/assets/team/breno-franca.png";
+import nicollePhoto from "@/assets/team/nicolle-truglio.png";
 import vamuCapa from "@/assets/projects/vamu/capa.gif";
 import vamu2 from "@/assets/projects/vamu/slide-2.webp";
 import vamu3 from "@/assets/projects/vamu/slide-3.mp4";
