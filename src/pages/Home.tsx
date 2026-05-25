@@ -11,19 +11,30 @@ const Home = () => {
   return (
     <Layout>
       {/* Fixed background motion - fills viewport, stays behind content */}
-      <div className="fixed inset-0 w-screen h-screen -z-10 bg-secondary overflow-hidden pointer-events-none">
+      <div
+        className="fixed inset-0 -z-10 bg-secondary overflow-hidden pointer-events-none"
+        style={{ width: "100vw", height: "100dvh" }}
+      >
         <video
           src={motionCapa}
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
+          // @ts-ignore - iOS Safari inline playback
+          webkit-playsinline="true"
+          disablePictureInPicture
         />
       </div>
 
       {/* Spacer so projects start below the hero viewport */}
-      <div className="h-[calc(100vh-5rem)]" aria-hidden="true" />
+      <div
+        className="w-full"
+        style={{ height: "calc(100dvh - 5rem)" }}
+        aria-hidden="true"
+      />
 
       {/* Projects Grid - scrolls over the fixed motion */}
       <section className="relative z-10 bg-transparent px-3 py-4">
