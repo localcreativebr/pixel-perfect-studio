@@ -95,6 +95,19 @@ export const siteContent = {
         bio: "Brand Identity | Graphic Designer",
       },
     },
+    {
+      name: "Nicolle Truglio",
+      photo: nicollePhoto,
+      age: 24,
+      pt: {
+        role: "Designer — 24 anos",
+        bio: "Relacionamentos & Operações",
+      },
+      en: {
+        role: "Designer — 24 years old",
+        bio: "Relationships & Operations",
+      },
+    },
   ] as TeamMember[],
   projects: [
     {
