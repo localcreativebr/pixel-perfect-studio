@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <Layout>
       <section className="px-3 py-8">
-        <h1 className="text-4xl mb-16 font-semibold">Contact</h1>
+        <div className="mb-16" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Left side - info */}
