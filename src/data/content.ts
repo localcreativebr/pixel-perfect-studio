@@ -31,6 +31,13 @@ export interface Project {
   description: string;
   thumbnail: string;
   images: string[];
+  /**
+   * Optional Behance-like layout pattern.
+   * "full" = image occupies full row.
+   * "half" = image occupies half row (must come in consecutive pairs).
+   * Length must match images.length when provided.
+   */
+  layout?: ("full" | "half")[];
   credits: {
     role: string;
     name: string;
