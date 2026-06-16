@@ -132,6 +132,8 @@ A tipografia foi pensada para remeter ao movimento do GPS pelas ruas, como se es
 O azul foi escolhido em conjunto com o cliente por ser uma cor forte e ao mesmo tempo leve. Ele representa um dia sem nuvens, tranquilidade e confiança. O azul também carrega a ideia de esperança — a mesma esperança que existe quando aguardamos a chegada de algo que acabamos de comprar. Na Vamo, o azul simboliza a certeza de que a entrega vai chegar.`,
       thumbnail: vamuCapa,
       images: [vamu2, vamu3, vamu4, vamu5, vamu6, vamu7, vamu8, vamu9, vamu10, vamu11, vamu12, vamu13, vamu14, vamu15],
+      // Behance composition pattern for VAMO (14 modules)
+      layout: ["full", "half", "half", "full", "half", "half", "full", "half", "half", "full", "full", "half", "half", "full"],
       credits: [
         { role: "Creative Direction", name: "Fabricio Costa" },
         { role: "Design", name: "Breno França" },
