@@ -59,11 +59,44 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Gallery: pair every two consecutive images side-by-side, but if total odd the last one is full width */}
+      {/* Gallery */}
       <section className="px-3 pb-8">
         {(() => {
           const items = project.images;
+          const layout = project.layout;
           const rows: JSX.Element[] = [];
+
+          if (layout && layout.length === items.length) {
+            let i = 0;
+            while (i < items.length) {
+              if (layout[i] === "half" && i + 1 < items.length && layout[i + 1] === "half") {
+                rows.push(
+                  <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                    <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
+                      <Media src={items[i]} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
+                      <Media src={items[i + 1]} className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                );
+                i += 2;
+              } else {
+                rows.push(
+                  <div
+                    key={i}
+                    className="bg-secondary w-full aspect-video mb-3 overflow-hidden rounded-xl"
+                  >
+                    <Media src={items[i]} className="w-full h-full object-cover" />
+                  </div>
+                );
+                i += 1;
+              }
+            }
+            return rows;
+          }
+
+          // Fallback: pair every two consecutive images
           let i = 0;
           while (i < items.length) {
             if (i + 1 < items.length) {
