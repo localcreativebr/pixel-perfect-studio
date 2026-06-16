@@ -50,7 +50,7 @@ const ProjectDetail = () => {
       {/* Project info */}
       <section className="px-3 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          <h1 className="text-3xl md:text-4xl font-bold italic">
+          <h1 className="text-3xl md:text-4xl font-bold">
             {project.name}
           </h1>
           <p className="text-lg leading-relaxed whitespace-pre-line">
