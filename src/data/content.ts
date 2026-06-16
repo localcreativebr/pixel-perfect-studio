@@ -112,7 +112,7 @@ export const siteContent = {
   projects: [
     {
       id: "vamu",
-      name: "Vamu",
+      name: "Vamo",
       description:
         `A Vamo Entregas é um serviço de delivery rápido, acessível e totalmente transparente. Criada para quem precisa receber com agilidade e quer acompanhar tudo de perto, a Vamo prioriza a comunicação clara, o contato humano e uma experiência simples — do pedido à entrega.
 
