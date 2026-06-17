@@ -15,11 +15,21 @@ const Media = ({ src, className }: { src: string; className?: string }) => {
         loop
         muted
         playsInline
+        preload="auto"
       />
     );
   }
-  return <img src={src} alt="" className={className} />;
+  return (
+    <img
+      src={src}
+      alt=""
+      className={className}
+      loading="eager"
+      decoding="async"
+    />
+  );
 };
+
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -72,14 +82,15 @@ const ProjectDetail = () => {
               if (layout[i] === "half" && i + 1 < items.length && layout[i + 1] === "half") {
                 rows.push(
                   <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-                    <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
+                    <div className="bg-secondary rounded-xl aspect-[4/5] overflow-hidden">
                       <Media src={items[i]} className="w-full h-full object-cover" />
                     </div>
-                    <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
+                    <div className="bg-secondary rounded-xl aspect-[4/5] overflow-hidden">
                       <Media src={items[i + 1]} className="w-full h-full object-cover" />
                     </div>
                   </div>
                 );
+
                 i += 2;
               } else {
                 rows.push(
