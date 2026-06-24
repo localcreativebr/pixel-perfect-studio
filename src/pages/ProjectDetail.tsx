@@ -26,6 +26,8 @@ const Media = ({ src, className }: { src: string; className?: string }) => {
       className={className}
       loading="eager"
       decoding="async"
+      // @ts-ignore - fetchpriority is a valid HTML attribute
+      fetchpriority="high"
     />
   );
 };
