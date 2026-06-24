@@ -82,10 +82,10 @@ const ProjectDetail = () => {
               if (layout[i] === "half" && i + 1 < items.length && layout[i + 1] === "half") {
                 rows.push(
                   <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-                    <div className="bg-secondary rounded-xl aspect-square overflow-hidden">
+                    <div className="bg-secondary rounded-xl overflow-hidden" style={{ aspectRatio: "2667 / 3000" }}>
                       <Media src={items[i]} className="w-full h-full object-cover" />
                     </div>
-                    <div className="bg-secondary rounded-xl aspect-square overflow-hidden">
+                    <div className="bg-secondary rounded-xl overflow-hidden" style={{ aspectRatio: "2667 / 3000" }}>
                       <Media src={items[i + 1]} className="w-full h-full object-cover" />
                     </div>
                   </div>
