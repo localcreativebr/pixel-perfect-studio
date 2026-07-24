@@ -49,13 +49,5 @@ const Work = () => {
     </Layout>
   );
 };
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-    </Layout>
-  );
-};
 
 export default Work;
