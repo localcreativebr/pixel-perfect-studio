@@ -185,5 +185,29 @@ E o GonBank é isso: um banco com alma digital, coração de rua e visão de fut
         { role: "Strategy & Copywriting", name: "Pamela Fernandes" },
       ],
     },
+    {
+      id: "orbyt-ia",
+      name: "ORBYT IA",
+      description:
+        `A Orbyt nasceu da vontade de tornar a tecnologia uma aliada real da rotina. Idealizada por dois jovens empreendedores, a marca surgiu a partir de uma necessidade simples: ganhar tempo, não perder compromissos e contar com um suporte inteligente nos momentos em que a vida acontece.
+
+Mais do que uma inteligência artificial, a Orbyt foi pensada para estar sempre por perto. O nome vem de orbitar — acompanhar, permanecer próximo, fazer parte do caminho. É exatamente esse o seu papel: estar presente sem ser invasiva, oferecendo apoio de forma natural em qualquer momento do dia.
+
+O símbolo traduz essa ideia em forma. Construído por pequenos quadrados, ele faz referência aos pixels, a base de tudo o que conhecemos no universo digital. Juntos, esses pixels formam uma estrela, um símbolo que carrega um significado especial: a luz de muitas estrelas leva milhões — e até bilhões — de anos para chegar até nós. Em alguns casos, a estrela já nem existe mais, mas seu brilho continua iluminando o céu. É uma metáfora sobre legado, permanência e o impacto que boas ideias podem deixar ao longo do tempo.
+
+Pensada para quem está construindo grandes projetos, a Orbyt acompanha empresários, executivos e pessoas que entendem que tempo é seu recurso mais valioso. Integrada a diferentes dispositivos — incluindo sistemas automotivos — ela transforma deslocamentos, reuniões e pequenas tarefas em oportunidades para viver uma rotina mais inteligente e produtiva.
+
+Para completar essa identidade, a tipografia Nohemi foi escolhida por equilibrar sofisticação e simplicidade. Suas formas limpas e contemporâneas reforçam a personalidade da marca: tecnológica, elegante e feita para durar.`,
+      thumbnail: orbyt1,
+      images: [orbyt2, orbyt3, orbyt4, orbyt5, orbyt6, orbyt7, orbyt8, orbyt9, orbyt10, orbyt11, orbyt12, orbyt13, orbyt14, orbyt15, orbyt16, orbyt17, orbyt18, orbyt19, orbyt20],
+      layout: ["full", "full", "half", "half", "full", "full", "full", "full", "full", "full", "full", "full", "half", "half", "full", "full", "full", "full", "full"],
+      credits: [
+        { role: "Design & Direction", name: "Fabrício Costa" },
+        { role: "Design", name: "Breno França" },
+        { role: "Copywriting", name: "Nicolle Treglio" },
+        { role: "Motion Logo", name: "Gabriel Machado" },
+        { role: "Motion", name: "Fabrício Costa" },
+      ],
+    },
   ] as Project[],
 };
