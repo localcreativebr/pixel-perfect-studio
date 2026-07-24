@@ -25,6 +25,26 @@ import gonbank6 from "@/assets/projects/gonbank/slide-6.webp";
 import gonbank7 from "@/assets/projects/gonbank/slide-7.webp";
 import gonbank8 from "@/assets/projects/gonbank/slide-8.webp";
 import gonbank9 from "@/assets/projects/gonbank/slide-9.gif";
+import orbyt1 from "@/assets/projects/orbyt/slide-1.mp4";
+import orbyt2 from "@/assets/projects/orbyt/slide-2.png";
+import orbyt3 from "@/assets/projects/orbyt/slide-3.png";
+import orbyt4 from "@/assets/projects/orbyt/slide-4.mp4";
+import orbyt5 from "@/assets/projects/orbyt/slide-5.png";
+import orbyt6 from "@/assets/projects/orbyt/slide-6.png";
+import orbyt7 from "@/assets/projects/orbyt/slide-7.png";
+import orbyt8 from "@/assets/projects/orbyt/slide-8.png";
+import orbyt9 from "@/assets/projects/orbyt/slide-9.png";
+import orbyt10 from "@/assets/projects/orbyt/slide-10.png";
+import orbyt11 from "@/assets/projects/orbyt/slide-11.png";
+import orbyt12 from "@/assets/projects/orbyt/slide-12.png";
+import orbyt13 from "@/assets/projects/orbyt/slide-13.png";
+import orbyt14 from "@/assets/projects/orbyt/slide-14.mp4";
+import orbyt15 from "@/assets/projects/orbyt/slide-15.mp4";
+import orbyt16 from "@/assets/projects/orbyt/slide-16.png";
+import orbyt17 from "@/assets/projects/orbyt/slide-17.png";
+import orbyt18 from "@/assets/projects/orbyt/slide-18.png";
+import orbyt19 from "@/assets/projects/orbyt/slide-19.png";
+import orbyt20 from "@/assets/projects/orbyt/slide-20.png";
 
 export interface Project {
   id: string;
