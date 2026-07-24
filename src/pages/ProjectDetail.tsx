@@ -77,6 +77,11 @@ const ProjectDetail = () => {
           const items = project.images;
           const layout = project.layout;
           const rows: JSX.Element[] = [];
+          // ORBYT IA: pares permanecem lado a lado também no mobile
+          const pairCols =
+            project.id === "orbyt-ia"
+              ? "grid grid-cols-2 gap-3 mb-3 items-start"
+              : "grid grid-cols-1 md:grid-cols-2 gap-3 mb-3";
 
           if (layout && layout.length === items.length) {
             let i = 0;
