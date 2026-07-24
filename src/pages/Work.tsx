@@ -9,7 +9,7 @@ const Work = () => {
 
   return (
     <Layout>
-      <section className="px-3 py-8">
+      <section className="px-3 pt-24 sm:pt-28 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {projects.map((project) => (
             <Link
