@@ -25,6 +25,26 @@ import gonbank6 from "@/assets/projects/gonbank/slide-6.webp";
 import gonbank7 from "@/assets/projects/gonbank/slide-7.webp";
 import gonbank8 from "@/assets/projects/gonbank/slide-8.webp";
 import gonbank9 from "@/assets/projects/gonbank/slide-9.gif";
+import orbyt1 from "@/assets/projects/orbyt/slide-1.mp4";
+import orbyt2 from "@/assets/projects/orbyt/slide-2.png";
+import orbyt3 from "@/assets/projects/orbyt/slide-3.png";
+import orbyt4 from "@/assets/projects/orbyt/slide-4.mp4";
+import orbyt5 from "@/assets/projects/orbyt/slide-5.png";
+import orbyt6 from "@/assets/projects/orbyt/slide-6.png";
+import orbyt7 from "@/assets/projects/orbyt/slide-7.png";
+import orbyt8 from "@/assets/projects/orbyt/slide-8.png";
+import orbyt9 from "@/assets/projects/orbyt/slide-9.png";
+import orbyt10 from "@/assets/projects/orbyt/slide-10.png";
+import orbyt11 from "@/assets/projects/orbyt/slide-11.png";
+import orbyt12 from "@/assets/projects/orbyt/slide-12.png";
+import orbyt13 from "@/assets/projects/orbyt/slide-13.png";
+import orbyt14 from "@/assets/projects/orbyt/slide-14.mp4";
+import orbyt15 from "@/assets/projects/orbyt/slide-15.mp4";
+import orbyt16 from "@/assets/projects/orbyt/slide-16.png";
+import orbyt17 from "@/assets/projects/orbyt/slide-17.png";
+import orbyt18 from "@/assets/projects/orbyt/slide-18.png";
+import orbyt19 from "@/assets/projects/orbyt/slide-19.png";
+import orbyt20 from "@/assets/projects/orbyt/slide-20.png";
 
 export interface Project {
   id: string;
@@ -163,6 +183,30 @@ E o GonBank é isso: um banco com alma digital, coração de rua e visão de fut
         { role: "Design", name: "Rafael Purgatto / Fabrício Costa" },
         { role: "Motion Design", name: "Fabricio Costa / Anna Carolina" },
         { role: "Strategy & Copywriting", name: "Pamela Fernandes" },
+      ],
+    },
+    {
+      id: "orbyt-ia",
+      name: "ORBYT IA",
+      description:
+        `A Orbyt nasceu da vontade de tornar a tecnologia uma aliada real da rotina. Idealizada por dois jovens empreendedores, a marca surgiu a partir de uma necessidade simples: ganhar tempo, não perder compromissos e contar com um suporte inteligente nos momentos em que a vida acontece.
+
+Mais do que uma inteligência artificial, a Orbyt foi pensada para estar sempre por perto. O nome vem de orbitar — acompanhar, permanecer próximo, fazer parte do caminho. É exatamente esse o seu papel: estar presente sem ser invasiva, oferecendo apoio de forma natural em qualquer momento do dia.
+
+O símbolo traduz essa ideia em forma. Construído por pequenos quadrados, ele faz referência aos pixels, a base de tudo o que conhecemos no universo digital. Juntos, esses pixels formam uma estrela, um símbolo que carrega um significado especial: a luz de muitas estrelas leva milhões — e até bilhões — de anos para chegar até nós. Em alguns casos, a estrela já nem existe mais, mas seu brilho continua iluminando o céu. É uma metáfora sobre legado, permanência e o impacto que boas ideias podem deixar ao longo do tempo.
+
+Pensada para quem está construindo grandes projetos, a Orbyt acompanha empresários, executivos e pessoas que entendem que tempo é seu recurso mais valioso. Integrada a diferentes dispositivos — incluindo sistemas automotivos — ela transforma deslocamentos, reuniões e pequenas tarefas em oportunidades para viver uma rotina mais inteligente e produtiva.
+
+Para completar essa identidade, a tipografia Nohemi foi escolhida por equilibrar sofisticação e simplicidade. Suas formas limpas e contemporâneas reforçam a personalidade da marca: tecnológica, elegante e feita para durar.`,
+      thumbnail: orbyt1,
+      images: [orbyt2, orbyt3, orbyt4, orbyt5, orbyt6, orbyt7, orbyt8, orbyt9, orbyt10, orbyt11, orbyt12, orbyt13, orbyt14, orbyt15, orbyt16, orbyt17, orbyt18, orbyt19, orbyt20],
+      layout: ["full", "full", "half", "half", "full", "full", "full", "full", "full", "full", "full", "full", "half", "half", "full", "full", "full", "full", "full"],
+      credits: [
+        { role: "Design & Direction", name: "Fabrício Costa" },
+        { role: "Design", name: "Breno França" },
+        { role: "Copywriting", name: "Nicolle Treglio" },
+        { role: "Motion Logo", name: "Gabriel Machado" },
+        { role: "Motion", name: "Fabrício Costa" },
       ],
     },
   ] as Project[],
