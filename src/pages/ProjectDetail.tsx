@@ -91,7 +91,7 @@ const ProjectDetail = () => {
             while (i < items.length) {
               if (layout[i] === "half" && i + 1 < items.length && layout[i + 1] === "half") {
                 rows.push(
-                  <div key={i} className={pairCols}>
+                  <Reveal key={i} className={pairCols}>
 
                     <div className="bg-secondary rounded-xl overflow-hidden" style={{ aspectRatio: "2667 / 3000" }}>
                       <Media src={items[i]} className="w-full h-full object-cover" />
@@ -99,19 +99,20 @@ const ProjectDetail = () => {
                     <div className="bg-secondary rounded-xl overflow-hidden" style={{ aspectRatio: "2667 / 3000" }}>
                       <Media src={items[i + 1]} className="w-full h-full object-cover" />
                     </div>
-                  </div>
+                  </Reveal>
                 );
 
                 i += 2;
               } else {
                 rows.push(
-                  <div
+                  <Reveal
                     key={i}
                     className="bg-secondary w-full aspect-video mb-3 overflow-hidden rounded-xl"
                   >
                     <Media src={items[i]} className="w-full h-full object-cover" />
-                  </div>
+                  </Reveal>
                 );
+
                 i += 1;
               }
             }
