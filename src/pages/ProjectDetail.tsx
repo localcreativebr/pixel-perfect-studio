@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { siteContent } from "@/data/content";
+import Reveal from "@/components/Reveal";
+
 
 const isVideo = (src: string) => /\.(mp4|webm|mov)(\?|$)/i.test(src);
 

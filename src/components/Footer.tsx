@@ -64,7 +64,8 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             </p>
           </div>
         </div>
-      </div>
+      </Reveal>
+
     </footer>
   );
 });
