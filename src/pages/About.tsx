@@ -61,7 +61,7 @@ const About = () => {
           {team.map((member, i) => {
             const memberContent = member[lang];
             return (
-              <div key={i} className="grid grid-cols-2 gap-3">
+              <Reveal key={i} className="grid grid-cols-2 gap-3">
                 <div className="bg-secondary rounded-xl aspect-square overflow-hidden">
                   {member.photo ? (
                     <img
@@ -82,7 +82,8 @@ const About = () => {
                     {memberContent.bio}
                   </p>
                 </div>
-              </div>
+              </Reveal>
+
             );
           })}
         </div>
