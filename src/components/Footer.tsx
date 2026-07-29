@@ -1,10 +1,11 @@
 import { forwardRef } from "react";
+import Reveal from "./Reveal";
 
 const Footer = forwardRef<HTMLElement>((_, ref) => {
   return (
     <footer ref={ref} className="bg-primary text-primary-foreground px-4 py-8">
       {/* Top section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div>
           <h2 className="text-4xl font-bold md:text-2xl">©2026</h2>
         </div>
@@ -14,16 +15,17 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             THAT MAKES A DIFFERENCE.
           </h2>
         </div>
-      </div>
+      </Reveal>
 
       {/* Location */}
-      <div className="mb-16">
+      <Reveal className="mb-16">
         <p className="text-lg">São Paulo, SP</p>
         <p className="text-lg">Brazil</p>
-      </div>
+      </Reveal>
 
       {/* Bottom section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
         <div className="flex flex-col gap-6">
           <a
             href="https://www.linkedin.com/company/local-creativebr/posts/?feedView=all"
