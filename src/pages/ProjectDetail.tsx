@@ -124,25 +124,26 @@ const ProjectDetail = () => {
           while (i < items.length) {
             if (i + 1 < items.length) {
               rows.push(
-                <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                <Reveal key={i} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                   <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
                     <Media src={items[i]} className="w-full h-full object-cover" />
                   </div>
                   <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
                     <Media src={items[i + 1]} className="w-full h-full object-cover" />
                   </div>
-                </div>
+                </Reveal>
               );
               i += 2;
             } else {
               rows.push(
-                <div
+                <Reveal
                   key={i}
                   className="bg-secondary w-full aspect-video mb-3 overflow-hidden rounded-xl"
                 >
                   <Media src={items[i]} className="w-full h-full object-cover" />
-                </div>
+                </Reveal>
               );
+
               i += 1;
             }
           }
