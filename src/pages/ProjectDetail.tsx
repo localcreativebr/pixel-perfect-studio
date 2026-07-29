@@ -56,22 +56,23 @@ const ProjectDetail = () => {
     <Layout>
       {/* Hero */}
       <section className="px-0">
-        <div className="bg-secondary w-full aspect-video overflow-hidden">
+        <Reveal className="bg-secondary w-full aspect-video overflow-hidden">
           <Media src={project.thumbnail} className="w-full h-full object-cover" />
-        </div>
+        </Reveal>
       </section>
 
       {/* Project info */}
       <section className="px-3 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           <h1 className="text-3xl md:text-4xl font-bold">
             {project.name}
           </h1>
           <p className="text-lg leading-relaxed whitespace-pre-line">
             {project.description}
           </p>
-        </div>
+        </Reveal>
       </section>
+
 
       {/* Gallery */}
       <section className="px-3 pb-8">
