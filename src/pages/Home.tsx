@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import Reveal from "@/components/Reveal";
+
 import { siteContent } from "@/data/content";
 import motionCapa from "@/assets/home-capa.mp4";
 
@@ -70,7 +72,9 @@ const Home = () => {
                 )}
               </div>
             </Link>
+            </Reveal>
           ))}
+
         </div>
       </section>
     </Layout>
