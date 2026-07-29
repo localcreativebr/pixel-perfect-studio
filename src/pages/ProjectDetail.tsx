@@ -153,16 +153,19 @@ const ProjectDetail = () => {
 
       {/* Credits */}
       <section className="px-3 pb-16">
-        <h3 className="text-sm font-bold mb-6 uppercase">Ficha Técnica</h3>
-        <div className="flex flex-col gap-4">
-          {project.credits.map((credit, i) => (
-            <div key={i}>
-              <p className="text-sm font-bold">{credit.role}</p>
-              <p className="text-sm text-muted-foreground">{credit.name}</p>
-            </div>
-          ))}
-        </div>
+        <Reveal>
+          <h3 className="text-sm font-bold mb-6 uppercase">Ficha Técnica</h3>
+          <div className="flex flex-col gap-4">
+            {project.credits.map((credit, i) => (
+              <div key={i}>
+                <p className="text-sm font-bold">{credit.role}</p>
+                <p className="text-sm text-muted-foreground">{credit.name}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </section>
+
     </Layout>
   );
 };
