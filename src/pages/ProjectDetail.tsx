@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { siteContent } from "@/data/content";
+import Reveal from "@/components/Reveal";
+
 
 const isVideo = (src: string) => /\.(mp4|webm|mov)(\?|$)/i.test(src);
 
@@ -54,22 +56,23 @@ const ProjectDetail = () => {
     <Layout>
       {/* Hero */}
       <section className="px-0">
-        <div className="bg-secondary w-full aspect-video overflow-hidden">
+        <Reveal className="bg-secondary w-full aspect-video overflow-hidden">
           <Media src={project.thumbnail} className="w-full h-full object-cover" />
-        </div>
+        </Reveal>
       </section>
 
       {/* Project info */}
       <section className="px-3 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           <h1 className="text-3xl md:text-4xl font-bold">
             {project.name}
           </h1>
           <p className="text-lg leading-relaxed whitespace-pre-line">
             {project.description}
           </p>
-        </div>
+        </Reveal>
       </section>
+
 
       {/* Gallery */}
       <section className="px-3 pb-8">
@@ -88,7 +91,7 @@ const ProjectDetail = () => {
             while (i < items.length) {
               if (layout[i] === "half" && i + 1 < items.length && layout[i + 1] === "half") {
                 rows.push(
-                  <div key={i} className={pairCols}>
+                  <Reveal key={i} className={pairCols}>
 
                     <div className="bg-secondary rounded-xl overflow-hidden" style={{ aspectRatio: "2667 / 3000" }}>
                       <Media src={items[i]} className="w-full h-full object-cover" />
@@ -96,19 +99,20 @@ const ProjectDetail = () => {
                     <div className="bg-secondary rounded-xl overflow-hidden" style={{ aspectRatio: "2667 / 3000" }}>
                       <Media src={items[i + 1]} className="w-full h-full object-cover" />
                     </div>
-                  </div>
+                  </Reveal>
                 );
 
                 i += 2;
               } else {
                 rows.push(
-                  <div
+                  <Reveal
                     key={i}
                     className="bg-secondary w-full aspect-video mb-3 overflow-hidden rounded-xl"
                   >
                     <Media src={items[i]} className="w-full h-full object-cover" />
-                  </div>
+                  </Reveal>
                 );
+
                 i += 1;
               }
             }
@@ -120,25 +124,26 @@ const ProjectDetail = () => {
           while (i < items.length) {
             if (i + 1 < items.length) {
               rows.push(
-                <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                <Reveal key={i} className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                   <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
                     <Media src={items[i]} className="w-full h-full object-cover" />
                   </div>
                   <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden">
                     <Media src={items[i + 1]} className="w-full h-full object-cover" />
                   </div>
-                </div>
+                </Reveal>
               );
               i += 2;
             } else {
               rows.push(
-                <div
+                <Reveal
                   key={i}
                   className="bg-secondary w-full aspect-video mb-3 overflow-hidden rounded-xl"
                 >
                   <Media src={items[i]} className="w-full h-full object-cover" />
-                </div>
+                </Reveal>
               );
+
               i += 1;
             }
           }
@@ -148,16 +153,19 @@ const ProjectDetail = () => {
 
       {/* Credits */}
       <section className="px-3 pb-16">
-        <h3 className="text-sm font-bold mb-6 uppercase">Ficha Técnica</h3>
-        <div className="flex flex-col gap-4">
-          {project.credits.map((credit, i) => (
-            <div key={i}>
-              <p className="text-sm font-bold">{credit.role}</p>
-              <p className="text-sm text-muted-foreground">{credit.name}</p>
-            </div>
-          ))}
-        </div>
+        <Reveal>
+          <h3 className="text-sm font-bold mb-6 uppercase">Ficha Técnica</h3>
+          <div className="flex flex-col gap-4">
+            {project.credits.map((credit, i) => (
+              <div key={i}>
+                <p className="text-sm font-bold">{credit.role}</p>
+                <p className="text-sm text-muted-foreground">{credit.name}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </section>
+
     </Layout>
   );
 };

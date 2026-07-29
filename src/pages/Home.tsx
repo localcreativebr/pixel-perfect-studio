@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import Reveal from "@/components/Reveal";
+
 import { siteContent } from "@/data/content";
 import motionCapa from "@/assets/home-capa.mp4";
 
@@ -40,11 +42,12 @@ const Home = () => {
       <section className="relative z-10 bg-transparent px-3 py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {projects.map((project) => (
+            <Reveal key={project.id}>
             <Link
-              key={project.id}
               to={`/work/${project.id}`}
               className="group block"
             >
+
               <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden flex items-center justify-center transition-transform duration-300 group-hover:scale-[0.98]">
                 {project.thumbnail ? (
                   isVideo(project.thumbnail) ? (
@@ -69,7 +72,9 @@ const Home = () => {
                 )}
               </div>
             </Link>
+            </Reveal>
           ))}
+
         </div>
       </section>
     </Layout>

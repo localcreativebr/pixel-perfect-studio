@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import Reveal from "@/components/Reveal";
+
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -39,7 +41,7 @@ const Contact = () => {
       <section className="px-3 py-8">
         <div className="mb-16" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Left side - info */}
           <div className="flex flex-col gap-6">
             <a
@@ -124,7 +126,8 @@ const Contact = () => {
               </button>
             </div>
           </form>
-        </div>
+        </Reveal>
+
       </section>
     </Layout>
   );

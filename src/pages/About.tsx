@@ -3,6 +3,8 @@ import Layout from "@/components/Layout";
 import { siteContent, type Language } from "@/data/content";
 import { cn } from "@/lib/utils";
 import aboutCapa from "@/assets/about-capa.png";
+import Reveal from "@/components/Reveal";
+
 
 const About = () => {
   const [lang, setLang] = useState<Language>("pt");
@@ -12,20 +14,21 @@ const About = () => {
   return (
     <Layout>
       {/* Hero image area */}
-      <section className="bg-secondary w-full aspect-video overflow-hidden">
+      <Reveal as="section" className="bg-secondary w-full aspect-video overflow-hidden">
         <img
           src={aboutCapa}
           alt="Local Creative studio"
           className="w-full h-full object-cover"
         />
-      </section>
+      </Reveal>
 
       {/* About text */}
       <section className="px-3 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <h1 className="text-4xl font-bold">{aboutContent.title}</h1>
           <p className="text-lg leading-relaxed">{aboutContent.description}</p>
-        </div>
+        </Reveal>
+
 
         {/* Language toggle */}
         <div className="flex gap-6 mt-12 mb-20">
@@ -58,7 +61,7 @@ const About = () => {
           {team.map((member, i) => {
             const memberContent = member[lang];
             return (
-              <div key={i} className="grid grid-cols-2 gap-3">
+              <Reveal key={i} className="grid grid-cols-2 gap-3">
                 <div className="bg-secondary rounded-xl aspect-square overflow-hidden">
                   {member.photo ? (
                     <img
@@ -79,7 +82,8 @@ const About = () => {
                     {memberContent.bio}
                   </p>
                 </div>
-              </div>
+              </Reveal>
+
             );
           })}
         </div>

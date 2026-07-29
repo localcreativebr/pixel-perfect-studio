@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import Reveal from "@/components/Reveal";
+
 import { siteContent } from "@/data/content";
 
 const isVideo = (src: string) => /\.(mp4|webm|mov)(\?|$)/i.test(src);
@@ -12,11 +14,12 @@ const Work = () => {
       <section className="px-3 pt-24 sm:pt-28 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {projects.map((project) => (
+            <Reveal key={project.id}>
             <Link
-              key={project.id}
               to={`/work/${project.id}`}
               className="group block"
             >
+
               <div className="bg-secondary rounded-xl aspect-[4/3] overflow-hidden flex items-center justify-center transition-transform duration-300 group-hover:scale-[0.98]">
                 {project.thumbnail ? (
                   isVideo(project.thumbnail) ? (
@@ -43,7 +46,9 @@ const Work = () => {
                 )}
               </div>
             </Link>
+            </Reveal>
           ))}
+
         </div>
       </section>
     </Layout>
