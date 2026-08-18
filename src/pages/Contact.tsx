@@ -28,7 +28,7 @@ const Contact = () => {
     const body = encodeURIComponent(
       `Nome: ${form.firstName} ${form.lastName}\nServiço: ${form.service}\nEmail: ${form.email}\n\nDescrição do projeto:\n${form.description}`
     );
-    window.location.href = `mailto:localcreativebr@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hello@localcreative.com.br?subject=${subject}&body=${body}`;
 
     setTimeout(() => {
       setSending(false);
